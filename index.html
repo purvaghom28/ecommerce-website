@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>website</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .feature {
+        background-color: #333; /* Dark background for better contrast with text */
+        color: #fff; /* White text color */
+    }
+
+    .feature-item {
+        border-radius: 10px; /* Rounded corners for a softer look */
+        background-color: #444; /* Slightly lighter background for each item */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+        padding: 20px;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-10px); /* Slight lift effect on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    }
+
+    .feature-item i {
+        color: #ff9900; /* Icon color */
+    }
+
+    .section_title h1 {
+        font-size: 2.5rem; /* Adjust font size for better visibility */
+        font-weight: 700; /* Bold text */
+        margin-bottom: 20px;
+    }
+
+    .feature-item h3 {
+        font-size: 1.5rem; /* Heading size */
+        font-weight: 600; /* Slightly bold text */
+    }
+
+    .feature-item div {
+        font-size: 1rem; /* Text size */
+        line-height: 1.6; /* Better readability */
+    }
+
+    @media (max-width: 768px) {
+        .feature-item {
+            padding: 15px;
+        }
+
+        .section_title h1 {
+            font-size: 2rem; /* Smaller font size for smaller screens */
+        }
+
+        .feature-item h3 {
+            font-size: 1.25rem; /* Smaller heading size */
+        }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- ==============header menu section starts here============== -->
+  <section class="header_menu" id="header_menu">
+    <div class="container-fluid px-0 shadow">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 ">
+        <a class="navbar-brand pl-5 pl-small-0" href="index.html">
+          <img src="assets/logo.jpg" height=50 width=50 class="img img-fluid" width="120px" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="category.html">Category</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+      role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Dropdown
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+      </li> -->
+          </ul>
+          <div class="search mr-3">
+            <a href="search.html" class="btn btn-sm btn-outline-primary">
+              Search
+            </a>
+          </div>
+          <div class="cart">
+            <a href="cart.html">
+              <i class="fas fa-shopping-cart fa-2x"></i>
+              <img class="d-block w-100" src="assets/cartlogo.webp" height="40px" width="40px"
+              <span class="badge badge-pill badge-primary">  3</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ============== carousel section starts here============== -->
+  <section class="header_carousel" id="header_carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="assets/slide1.webp" height=500 width=100 alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/slide2.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/images/photo-1554774853-7f03caeb4b15.jfif" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  <!-- ============== carousel section starts here============== -->
+  
+  <!-- ==============shop by category starts here============== -->
+
+  <section class="shop_by_category py-5 my-5" id="shop_by_category">
+    <div class="container-fluid">
+      <div class="section_title text-center mb-5">
+        <h1 class="text-capitalize">Shop By Category</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-12">
+          <div class="card bg-dark text-white">
+            <a href="category.html">
+              <img class="card-img img img-fluid" src="assets/wc1.jpg"  style="height: 300px; width: 100%;" alt="Women's Clothing">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+          <div class="card bg-dark text-white">
+            <a href="category.html">
+              <img class="card-img img img-fluid" src="assets/mc2.jpg"  style="height: 300px; width: 100%;" alt="Men's Clothing">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+          <div class="card bg-dark text-white">
+            <a href="category.html">
+              <img class="card-img img img-fluid" src="assets/kc3.webp"  style="height: 300px; width: 100%;" alt="Kids' Clothing">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============shop by category ends here============== -->
+
+  <!-- ==============products starts here============== -->
+  <section class="products py-5 my-5 bg-light" id="products">
+    <div class="container ">
+      <div class="section_title text-center mb-5">
+        <h1 class="text-capitalize">Latest Products</h1>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-4 col-12">
+          <div class="single_product shadow text-center p-1">
+            <div class="product_img">
+              <a href="product_detail.html"><img src="assets/wc2.jpeg" class="img img-fluid" alt=""></a>
+              <div class="new_product">
+                <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
+              </div>
+            </div>
+            <div class="product-caption my-3">
+              <div class="product-ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star low-star"></i>
+                <i class="far fa-star low-star"></i>
+              </div>
+              <h4><a href="product_detail.html">Black Floral Dress</a></h4>
+              <div class="price">
+                <b><span class="mr-1">₹</span><span>1299</span></b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="single_product shadow text-center p-1 mt-small-5 mb-small-5">
+            <div class="product_img">
+              <a href="product_detail.html"><img src="assets/mc1.jpeg" class="img img-fluid" alt=""></a>
+              <div class="new_product">
+                <span class="badge py-2 px-3 badge-pill badge-danger">BestSeller</span>
+              </div>
+            </div>
+            <div class="product-caption my-3">
+              <div class="product-ratting">
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star low-star"></i>
+                <i class="far fa-star low-star"></i>
+              </div>
+              <h4><a href="product_detail.html">Mens Green Rayon Shirt</a></h4>
+              <div class="price">
+                <b><span class="mr-1">₹</span><span>699</span></b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="single_product shadow text-center p-1">
+            <div class="product_img">
+              <a href="product_detail.html"><img src="assets/wc3.jpeg" class="img img-fluid" alt=""></a>
+              <div class="new_product">
+                <span class="badge py-2 px-3 badge-pill badge-danger">Bestseller</span>
+              </div>
+            </div>
+            <div class="product-caption my-3">
+              <div class="product-ratting">
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star low-star"></i>
+                <i class="far fa-star low-star"></i>
+              </div>
+              <h4><a href="product_detail.html">Black Partywear Dress</a></h4>
+              <div class="price">
+                <b><span class="mr-1">₹</span><span>899</span></b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <div class="row">
+    <div class="col-md-4 col-12">
+      <div class="single_product shadow text-center p-1">
+        <div class="product_img">
+          <a href="product_detail.html">
+            <img src="assets/mc3.jpg" style="height: 300px; width: auto;" class="img img-fluid" alt="Highlander mens red shirt">
+          </a>
+          <div class="new_product">
+            <span class="badge py-2 px-3 badge-pill badge-danger"></span>
+          </div>
+        </div>
+        <div class="product-caption my-3">
+          <div class="product-rating">
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star low-star"></i>
+            <i class="far fa-star low-star"></i>
+          </div>
+          <h4><a href="product_detail.html">Highlander mens red shirt</a></h4>
+          <div class="price">
+            <b><span class="mr-1">₹</span><span>511</span></b>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-12">
+      <div class="single_product shadow text-center p-1 mt-small-5 mb-small-5">
+        <div class="product_img">
+          <a href="product_detail.html">
+            <img src="assets/kc3.webp" style="height: 300px; width: auto;" class="img img-fluid" alt="Pink Dress for kids">
+          </a>
+          <div class="new_product">
+            <span class="badge py-2 px-3 badge-pill badge-danger"></span>
+          </div>
+        </div>
+        <div class="product-caption my-3">
+          <div class="product-rating">
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star low-star"></i>
+            <i class="far fa-star low-star"></i>
+          </div>
+          <h4><a href="product_detail.html">Pink Dress for kids</a></h4>
+          <div class="price">
+            <b><span class="mr-1">₹</span><span>799</span></b>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-12">
+      <div class="single_product shadow text-center p-1">
+        <div class="product_img">
+          <a href="product_detail.html">
+            <img src="assets/kc2.webp" style="height: 270px; width: auto;" class="img img-fluid" alt="Floral kids Dress">
+          </a>
+          <div class="new_product">
+            <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
+          </div>
+        </div>
+        <div class="product-caption my-3">
+          <div class="product-rating">
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star low-star"></i>
+            <i class="far fa-star low-star"></i>
+          </div>
+          <h4><a href="product_detail.html">Floral kids Dress</a></h4>
+          <div class="price">
+            <b><span class="mr-1">₹</span><span>879</span></b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+  <!-- ==============products ends here============== -->
+
+  <!-- ==============feature starts here============== -->
+  <section class="feature py-5 mt-5" id="feature">
+      <div class="container">
+          <div class="section_title text-center mb-5">
+              <h1 class="text-capitalize">Our Features</h1>
+          </div>
+          <div class="row">
+              <div class="col-md-4 col-12 feature-item shadow p-3">
+                  <div class="text-center">
+                      <div class="mb-4">
+                          <i class="fas fa-shipping-fast fa-3x mb-3 pt-2"></i>
+                          <div>
+                              <h3>Free Shipping Method</h3>
+                          </div>
+                      </div>
+                      <div>
+                        Free Shipping: Enjoy the convenience of free shipping on all orders, ensuring you get your products delivered right to your doorstep without any additional cost. Whether you're shopping for everyday essentials or special items, we cover the shipping charges so you can shop with confidence and ease. No minimum purchase is required, and we strive to deliver your order promptly and securely. Shop now and take advantage of our hassle-free shipping service!
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 col-12 feature-item shadow p-3 mt-5 mb-5">
+                  <div class="text-center">
+                      <div class="mb-4">
+                          <i class="fas fa-lock fa-3x mb-3 pt-2"></i>
+                          <div>
+                              <h3>Secure Payment System</h3>
+                          </div>
+                      </div>
+                      <div>
+                        Secure Payment System: Our secure payment system ensures that all your transactions are protected with the highest level of encryption and security protocols. We use advanced technologies to safeguard your personal and financial information, giving you peace of mind while you shop. With various payment options available, you can complete your purchase confidently, knowing your data is safe and your payment is processed securely. Shop with trust and convenience, knowing we prioritize your security every step of the way.
+
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 col-12 feature-item shadow p-3">
+                  <div class="text-center">
+                      <div class="mb-4">
+                          <i class="fas fa-headphones fa-3x mb-3 pt-2"></i>
+                          <div>
+                              <h3>24/7 Support</h3>
+                          </div>
+                      </div>
+                      <div>
+                        24/7 Support: Our dedicated support team is available around the clock to assist you with any questions or concerns you may have. Whether it's a product inquiry, order issue, or general assistance, we're here to provide timely and helpful solutions at any hour of the day or night. With our 24/7 service, you can shop with confidence knowing that expert support is always just a call or message away. Experience uninterrupted service and support whenever you need it.
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- ==============feature ends here============== -->
+
+  <!-- ==============footer starts here============== -->
+  <section class="footer_section pt-5 pb-2" id="footer_section">
+  <footer>
+  <div class="container-fluid">
+  <div class="row">
+  <div class="col-md-3 col-6 pl-5 pl-small-15">
+  <div class="footer_title">
+  <a href="index.html"><img src="assets/logo.jpg" width="150px"
+  class="img img-fluid" alt="logo"></a>
+  </div>
+  <div>
+    Purva Ghom <br>
+    contact: +91-12345-12345<br>
+    email: plsgq@example.com
+  </div>
+  </div>
+  <div class="col-md-3 col-6">
+  <div class="footer_title pt-3 mb-3">
+  <h3>Quick Links</h3>
+  </div>
+  <div class="footer_links">
+  <ul>
+  <li><a href="about.html">About</a></li>
+  <li><a href="javascript:;">Offers & Discounts</a></li>
+  <li><a href="javascript:;">Get Coupon</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  </div>
+  </div>
+    <div class="col-md-3 col-6">
+    <div class="footer_title pt-3 mb-3">
+    <h3>New Products</h3>
+    </div>
+    <div class="footer_links">
+    <ul>
+    <li><a href="javascript:;">Woman Cloth</a></li>
+    <li><a href="javascript:;">Fashion Accessories</a></li>
+    <li><a href="javascript:;">Man Accessories</a></li>
+    <li><a href="javascript:;">Rubber made Toys</a></li>
+    </ul>
+    </div>
+    </div>
+    <div class="col-md-3 col-6">
+    <div class="footer_title pt-3 mb-3">
+    <h3>Support</h3>
+    </div>
+    <div class="footer_links">
+    <ul>
+    <li><a href="javascript:;">Frequently Asked Questions</a></li>
+    <li><a href="javascript:;">Terms & Conditions</a></li>
+    <li><a href="javascript:;">Privacy Policy</a></li>
+    <li><a href="javascript:;">Report a Payment Issue</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="border-top">
+    <h6 class="text-center mt-3">Copyright ©2020 All rights reserved
+    </h6>
+    </div>
+    </footer>
+    </section>
+    <div class="backtop">
+    <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+    <i class="fas fa-chevron-up text-dark"></i>
+    </a>
+    </div>
+    <!-- ==============footer ends here============== -->
+
+
+</body>
+
+</html>
